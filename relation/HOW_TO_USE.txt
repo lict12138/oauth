@@ -1,0 +1,23 @@
+
+
+
+
+项目使用MAVEN管理. 遵循TDD与DDD思想设计.
+
+模板项目中已经添加了公司常用的库及源代码.
+包括: OAuth, Security, commons tool, 主要包结构, MVC配置等
+
+
+在使用时需要作如下修改:
+1. 将项目中的所有 project_name 修改为真实的项目名(包括package name, web.xml, pom.xml)
+2.将pom.xml中的 JZYTTemplate 修改为项目名
+3.配置项目的数据库(project_name.properties)与测试数据库(test.properties)
+4.创建数据库，并在 /relation/db目录中根据initial_db.ddl创建相关表
+
+
+
+
+2018-05-28    bobzbfeng
+
+
+

@@ -1,0 +1,95 @@
+
+-------------------IN 'TEMPLATES'-------------
+Class:
+
+/*
+ * Copyright © 1998 - 2018 Tencent. All Rights Reserved
+ * www.tencent.com
+ * All rights reserved.
+ */
+package ${PACKAGE_NAME};
+
+#parse("File Header.java")
+public class ${NAME} {
+}
+
+
+
+Interface:
+
+/*
+ * Copyright © 1998 - 2018 Tencent. All Rights Reserved
+ * www.tencent.com
+ * All rights reserved.
+ */
+package ${PACKAGE_NAME};
+
+#parse("File Header.java")
+
+public interface ${NAME} {
+}
+
+
+Enum:
+
+/*
+ * Copyright © 1998 - 2018 Tencent. All Rights Reserved
+ * www.tencent.com
+ * All rights reserved.
+ */
+package ${PACKAGE_NAME};
+
+#parse("File Header.java")
+
+public enum ${NAME} {
+}
+
+
+AnnotationType:
+
+/*
+ * Copyright © 1998 - 2018 Tencent. All Rights Reserved
+ * www.tencent.com
+ * All rights reserved.
+ */
+package ${PACKAGE_NAME};
+
+#parse("File Header.java")
+
+public @interface ${NAME} {
+}
+
+------------------IN 'CODE'-------------
+Implemented, New & Overridden method body:
+throw new UnsupportedOperationException("Not yet implemented");
+
+Catch Statement Body
+${EXCEPTION}.printStackTrace();
+
+
+
+-----------------IN 'INCLUDES'--------------------
+ActionScript File Header , File Header: please replace the author.
+
+/**
+ *
+ * @author bobzbfeng
+ */
+
+
+-----------------IN 'Java EE'--------------------
+Web -> Jsp files -> Jsp File.jsp
+Change the comment content as follow, change the author to self name.
+
+<%--
+ * Copyright © 1998 - 2018 Tencent. All Rights Reserved
+ * www.tencent.com
+ * All rights reserved.
+--%>
+<%--
+ *
+ * @author bobzbfeng
+--%>
+
+
+

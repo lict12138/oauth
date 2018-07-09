@@ -1,0 +1,18 @@
+
+
+以下修改TOMCAT的默认配置,增强安全性, 并提供更多灵活性.
+
+
+1.修改JSESSIONID的名称(不要使用默认的)
+  编辑TOMCAT的conf/context.xml文件, 在<Context> 中添加以下内容
+   sessionCookiePath="/" sessionCookieName="tusiToken"
+ 添加后的示例如
+   <Context sessionCookiePath="/" sessionCookieName="tusiToken">
+
+ 说明: 可根据不同的TOMCAT使用不同的sessionCookieName, 增强安全性
+
+
+2.配置shared目录放置项目的配置文件,参考博客:http://blog.csdn.net/monkeyking1987/article/details/8994403
+
+3.TOMCAT服务器的Encoding设置为UTF-8;
+  编辑TOMCAT的conf/server.xml中的<Connector> 中添加  URIEncoding="UTF-8" 即可

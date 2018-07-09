@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link href="bootstrap.min.css" rel="stylesheet"/>
+    <title>IoT cloud API</title>
+
+    <style>
+        body {
+            font-family: "微软雅黑", Helvetica, Verdana, Arial, sans-serif;
+        }
+    </style>
+</head>
+<body class="container">
+<h2 class="page-header">IoT cloud API
+    <small>1.0</small>
+</h2>
+
+<div class="alert alert-info">
+    <strong>注意</strong>: 所有API请求都需要
+    <mark>access_token</mark>
+    参数 除了标记<span class="badge">public</span> API, 若没有
+    <mark>access_token</mark>
+    参数, 服务端将响应HTTP状态码 401
+    <br/>
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="well well-sm">
+            <h3>注册SE
+            </h3>
+
+            <p class="text-info">注册SE，获取密钥,该API供 TUSI 认证中心调用</p>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <p>
+                        请求URI:
+                        <br/>
+                        <code>/api/register/action</code> <span class="label label-warning">POST</span>
+                        <span class="label label-success">REST</span>
+                    </p>
+                    <p>
+                        Content-Type:
+                        <mark>application/json</mark>
+                    </p>
+
+                    <div>
+                        请求参数:
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>参数名</th>
+                                <th>参数值</th>
+                                <th>备注</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>hid</td>
+                                <td>String</td>
+                                <td>硬件对应的唯一ID</td>
+                            </tr>
+                            <tr>
+                                <td>rsapubkey</td>
+                                <td>String</td>
+                                <td>rsapubkey</td>
+                            </tr>
+                            <tr>
+                                <td>eccpubkey</td>
+                                <td>String</td>
+                                <td>eccpubkey</td>
+                            </tr>
+                            <tr>
+                                <td>algType</td>
+                                <td>Integer</td>
+                                <td>algType</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        请求示例:
+                    </div>
+                    <br/>
+                    <strong>响应:</strong>
+                    <pre>
+                        {"err":-1,"encryptedKey":"xxxxxxx","downCounter":"xxxxxx"}
+                    </pre>
+                    <p class="help-block">err 对应错误码，0代表请求成功，其余暂无匹配</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <hr/>
+        <p class="text-muted text-center">&copy; 2018 tencent.com</p>
+    </div>
+</div>
+</body>
+</html>

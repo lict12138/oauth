@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultdir="/WEB-INF/view/commons">
+
+
+    <!--main decorator-->
+    <decorator name="main" page="decorator-main.jsp">
+        <pattern>/system/**</pattern>
+    </decorator>
+    <!--main decorator-->
+    <decorator name="empMain" page="decorator-account-main.jsp">
+        <pattern>/account/**</pattern>
+    </decorator>
+
+    <excludes>
+        <pattern>/login*</pattern>
+        <pattern>/public/*</pattern>
+        <pattern>/account/application/model/**</pattern>
+    </excludes>
+
+</decorators>

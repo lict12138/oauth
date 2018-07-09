@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 不写会报错 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tencent.iot.infrastructure.impl.ApplicationRepository">
+    
+    <!--<resultMap id="app" type="com.tencent.iot.domain.Application">
+        <id column="c_guid" jdbcType="varchar" property="uuid"/>
+        <result column="c_application_name" jdbcType="varchar" property="applicationName"/>
+    </resultMap>
+
+    <insert id="saveApplication" parameterType="com.tencent.iot.domain.Application" useGeneratedKeys="true" keyProperty="uuid">
+        insert into t_application(c_guid, c_application_name, c_description, c_status, c_creator_uuid, c_create_time,c_archived,c_client_id)
+        values(#{uuid}, #{applicationName}, #{description}, #{status}, #{creatorUuid}, #{createTime},#{archived},#{clientId})
+    </insert>-->
+
+</mapper>
